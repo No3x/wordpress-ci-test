@@ -11,7 +11,11 @@ Domain Path: /languages
 */
 
 class SamplePlugin {
-	$shortcodes = array( "t", "r", "c" );
+
+	public $shortcodes = array( "t", "r", "c" );
+	
+	public function __construct() {
+	}
 }
 
 
