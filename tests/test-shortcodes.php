@@ -9,13 +9,9 @@ class AlertsTest extends WP_UnitTestCase {
 		
 		$sp = new SamplePlugin();
 
-		foreach ( $this->shortcodes as $shortcode )
-		add_shortcode( $shortcode, array( $this, '_shortcode_' . str_replace( '-', '_', $shortcode ) ) );
-
-		$this->atts = null;
-		$this->content = null;
-		$this->tagname = null;
-
+		foreach ( $this->shortcodes as $shortcode ) {
+			add_shortcode( $shortcode, array( $this, '_shortcode_' . str_replace( '-', '_', $shortcode ) ) );
+		}
 	}
 	
 	function testShortcodes {

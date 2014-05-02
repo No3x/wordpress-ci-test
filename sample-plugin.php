@@ -11,9 +11,8 @@ Domain Path: /languages
 */
 
 class SamplePlugin {
-
+	$shortcodes = array( "t", "r", "c" );
 }
-
 
 
 ?>
