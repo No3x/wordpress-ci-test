@@ -10,3 +10,10 @@ Text Domain: sample-plugin
 Domain Path: /languages
 */
 
+class SamplePlugin {
+
+}
+
+
+
+?>
