@@ -2,14 +2,14 @@
 
 require_once( '../sample-plugin.php' );
 
-class AlertsTest extends WP_UnitTestCase {
+class ShortcodesTest extends WP_UnitTestCase {
 	
 	function setUp() {
 		parent::setUp();
 		
 		$sp = new SamplePlugin();
 
-		foreach ( $this->shortcodes as $shortcode ) {
+		foreach ( $sp->shortcodes as $shortcode ) {
 			add_shortcode( $shortcode, array( $this, '_shortcode_' . str_replace( '-', '_', $shortcode ) ) );
 		}
 	}
