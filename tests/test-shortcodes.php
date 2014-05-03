@@ -14,7 +14,7 @@ class ShortcodesTest extends WP_UnitTestCase {
 		}
 	}
 	
-	function testShortcodes {
+	function testShortcodes() {
 		$expected = '<iframe width="500" height="200" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F38987054"></iframe>';
 		$params = array(
 		  'url' => 'http://api.soundcloud.com/tracks/38987054',
