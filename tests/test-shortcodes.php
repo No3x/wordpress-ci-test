@@ -1,7 +1,5 @@
 <?php
 
-//require_once( './bootstrap-shortcodes.php' );
-
 class ShortcodesTest extends WP_UnitTestCase {
 	
 	function setUp() {
