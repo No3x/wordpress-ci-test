@@ -6,28 +6,23 @@ class ShortcodesTest extends WP_UnitTestCase {
 	
 	function setUp() {
 		parent::setUp();
-		
-		$sp = new SamplePlugin();
-
-		foreach ( $sp->shortcodes as $shortcode ) {
-			add_shortcode( $shortcode, array( $this, '_shortcode_' . str_replace( '-', '_', $shortcode ) ) );
-		}
 	}
 	
-	function testShortcodes() {
-		$expected = '<iframe width="500" height="200" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F38987054"></iframe>';
-		$params = array(
-		  'url' => 'http://api.soundcloud.com/tracks/38987054',
-		  'iframe' => true,
-		  'width' => 500,
-		  'height' => 200
-		);
-		$this->assertEquals($expected, soundcloud_shortcode($params), 'Simple HTML5 widget');
-	}
 	function testSample() {
 		// replace this with some actual testing code
 		$this->assertTrue( true );
 	}
+	
+	function testAlerts() {
+		
+		$expected = '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button><strong>Well done!</strong>You successfully read <a class="alert-link" href="#">this important alert message</a>.</div>';
+		$content = '<strong>Well done!</strong>You successfully read <a class="alert-link" href="#">this important alert message</a>.';
+		$params = array(
+		  'type' => 'success'
+		);
+		$this->assertEquals($expected, bs_notice($params, $content), 'Alert');
+	}
+	
 }
 
 ?>	
