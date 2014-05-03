@@ -1,6 +1,6 @@
 <?php
 
-require_once( '../sample-plugin.php' );
+require_once( './sample-plugin.php' );
 
 class ShortcodesTest extends WP_UnitTestCase {
 	
