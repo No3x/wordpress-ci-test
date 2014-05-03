@@ -15,7 +15,7 @@ class ShortcodesTest extends WP_UnitTestCase {
 	
 	function testAlerts() {
 		
-		$expected = '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button><strong>Well done!</strong>You successfully read <a class="alert-link" href="#">this important alert message</a>.</div>';
+		$expected = '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><strong>Well done!</strong>You successfully read <a class="alert-link" href="#">this important alert message</a>.</div>';
 		$content = '<strong>Well done!</strong>You successfully read <a class="alert-link" href="#">this important alert message</a>.';
 		$params = array(
 		  'type' => 'success'
